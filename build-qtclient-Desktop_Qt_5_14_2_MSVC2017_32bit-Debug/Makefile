@@ -266,6 +266,7 @@ Makefile: ..\qtclient\qtclient.pro ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc201
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\qt_config.prf \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\win32-msvc\qmake.conf \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\exclusive_builds.prf \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\common\msvc-version.conf \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\toolchain.prf \
@@ -293,12 +294,13 @@ Makefile: ..\qtclient\qtclient.pro ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc201
 		..\qtclient\qtclient.pro \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Widgets.prl \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Gui.prl \
+		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Network.prl \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Core.prl \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\qtmain.prl \
-		.qmake.stash \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\build_pass.prf \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Widgetsd.prl \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Guid.prl \
+		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Networkd.prl \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Cored.prl \
 		..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\qtmaind.prl
 	$(QMAKE) -o Makefile ..\qtclient\qtclient.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -484,6 +486,7 @@ Makefile: ..\qtclient\qtclient.pro ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc201
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\qt_config.prf:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\win32-msvc\qmake.conf:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\spec_post.prf:
+.qmake.stash:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\exclusive_builds.prf:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\common\msvc-version.conf:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\toolchain.prf:
@@ -511,12 +514,13 @@ Makefile: ..\qtclient\qtclient.pro ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc201
 ..\qtclient\qtclient.pro:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Widgets.prl:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Gui.prl:
+..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Network.prl:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Core.prl:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\qtmain.prl:
-.qmake.stash:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\mkspecs\features\build_pass.prf:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Widgetsd.prl:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Guid.prl:
+..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Networkd.prl:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\Qt5Cored.prl:
 ..\..\..\tad_home\QT\qt-5.14.2\5.14.2\msvc2017\lib\qtmaind.prl:
 qmake: FORCE
