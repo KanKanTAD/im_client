@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTcpSocket>
 #include <QUdpSocket>
+#include <QTimer>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -26,10 +27,14 @@ private slots:
 
     void on_biu_btn_clicked();
 
+    void process_receiver();
+
+    void update_timeout();
+
 private:
     Ui::MainWindow *ui;
     QTcpSocket tcpSocket_;
     QUdpSocket udpSocket_;
-
+    QTimer timer_;
 };
 #endif // MAINWINDOW_H

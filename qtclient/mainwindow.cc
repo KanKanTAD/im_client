@@ -8,14 +8,13 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    connect(&udpSocket_,SIGNAL(readyRead()),this,SLOT(process_receiver()));
+    connect(&timer_,SIGNAL(timeout()),this,SLOT(update_timeout()));
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    if(udpSocket_.isOpen()){
-        udpSocket_.close();
-    }
 }
 
 
@@ -32,6 +31,8 @@ void MainWindow::on_conn_btn_clicked()
     auto port_ = this->ui->port_edit->text();
     auto bee_ = this->ui->port_edit->text();
     qInfo()<<QString("connect to %1:%2; by bee %3").arg(host_).arg(port_).arg(bee_);
+    // set heartbeat
+    timer_.start(bee_.toInt());
 }
 
 
@@ -39,6 +40,7 @@ void MainWindow::on_conn_btn_clicked()
 
 void MainWindow::on_disconn_btn_clicked()
 {
+    timer_.stop();
 }
 
 void MainWindow::on_biu_btn_clicked()
@@ -51,4 +53,21 @@ void MainWindow::on_biu_btn_clicked()
                              QHostAddress(host_),
                              port_.toUInt());
     qDebug()<<QString("biu-biu to %1:%2;").arg(host_).arg(port_);
+}
+
+void MainWindow::process_receiver()
+{
+    while(udpSocket_.hasPendingDatagrams()){
+        QByteArray datagram;
+        datagram.resize(udpSocket_.pendingDatagramSize());
+        udpSocket_.readDatagram(datagram.data(),datagram.size());
+        qDebug()<<QString("recive data:[%1]").arg(datagram.data());
+    }
+}
+
+void MainWindow::update_timeout()
+{
+    static int count = 0;
+    count += 1;
+    qDebug()<<QString("beat! %1").arg(count);
 }

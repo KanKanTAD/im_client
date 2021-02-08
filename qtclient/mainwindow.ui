@@ -99,7 +99,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="bee_edit"/>
+      <widget class="QLineEdit" name="bee_edit">
+       <property name="text">
+        <string>300</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="conn_btn">

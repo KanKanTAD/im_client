@@ -161,6 +161,7 @@ public:
         label_4->setText(QCoreApplication::translate("MainWindow", "port:", nullptr));
         port_edit->setText(QCoreApplication::translate("MainWindow", "6789", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "bee", nullptr));
+        bee_edit->setText(QCoreApplication::translate("MainWindow", "300", nullptr));
         conn_btn->setText(QCoreApplication::translate("MainWindow", "connect", nullptr));
         disconn_btn->setText(QCoreApplication::translate("MainWindow", "disconnect", nullptr));
         biu_btn->setText(QCoreApplication::translate("MainWindow", "biu biu", nullptr));
