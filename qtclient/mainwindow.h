@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QTcpSocket>
+#include <QUdpSocket>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,8 +20,16 @@ public:
 private slots:
     void on_login_btn_clicked();
 
+    void on_conn_btn_clicked();
+
+    void on_disconn_btn_clicked();
+
+    void on_biu_btn_clicked();
+
 private:
     Ui::MainWindow *ui;
-    QTcpSocket socket_;
+    QTcpSocket tcpSocket_;
+    QUdpSocket udpSocket_;
+
 };
 #endif // MAINWINDOW_H

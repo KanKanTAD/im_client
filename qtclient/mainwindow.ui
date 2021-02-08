@@ -58,8 +58,8 @@
      <rect>
       <x>240</x>
       <y>10</y>
-      <width>135</width>
-      <height>186</height>
+      <width>151</width>
+      <height>215</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -71,7 +71,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="host_edit"/>
+      <widget class="QLineEdit" name="host_edit">
+       <property name="text">
+        <string>9.135.98.122</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_4">
@@ -81,7 +85,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="port_edit"/>
+      <widget class="QLineEdit" name="port_edit">
+       <property name="text">
+        <string>6789</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_5">
@@ -104,6 +112,13 @@
       <widget class="QPushButton" name="disconn_btn">
        <property name="text">
         <string>disconnect</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="biu_btn">
+       <property name="text">
+        <string>biu biu</string>
        </property>
       </widget>
      </item>
