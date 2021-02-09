@@ -2,10 +2,17 @@
 #define MESSAGIES_H
 
 
-class Messagies
+enum MessageType {
+
+};
+
+class Message
 {
+    unsigned long id_;
+    MessageType type_;
+
 public:
-    Messagies();
+    Message();
 };
 
 #endif // MESSAGIES_H

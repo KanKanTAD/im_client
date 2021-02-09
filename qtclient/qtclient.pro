@@ -20,12 +20,14 @@ SOURCES += \
     connectinfo.cc \
     main.cc \
     mainwindow.cc \
-    messagies.cc
+    messagies.cc \
+    utils.cc
 
 HEADERS += \
     connectinfo.h \
     mainwindow.h \
-    messagies.h
+    messagies.h \
+    utils.h
 
 FORMS += \
     mainwindow.ui
